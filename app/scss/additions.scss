@@ -1,0 +1,154 @@
+body {
+    background: -webkit-linear-gradient(-57deg, rgb(241, 241, 241), rgb(130, 129, 114));
+    background: linear-gradient(-57deg, rgb(241, 241, 241), rgb(130, 129, 114));
+    min-height: 100vh;
+    font-family: 'Signika';
+}
+html {
+    background-color: #fff;
+}
+
+.logo {
+    margin-top: 3rem;
+    width: 250px;
+}
+
+a {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.navigation {
+    margin-top: 2rem;
+    @include breakpoint(small down) {
+        margin-bottom: 3rem;
+    }
+    ul.menu {
+        @include breakpoint(small down) {
+            @include menu-direction(vertical);
+        }
+        vertical-align: bottom;
+        align-items: stretch !important;
+        .left {
+            border-top-left-radius: 5px;
+            @include breakpoint (small down) {
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+        }
+        .right {
+            border-top-right-radius: 5px;
+            @include breakpoint (small down) {
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-top-right-radius: 0;
+            }
+        }
+    }
+    ul.menu li {
+        background-color: rgba(255, 255, 255, 0.4);
+        margin: 0;
+        vertical-align: bottom;
+    }
+    ul.menu li a {
+        color: #006bb7;
+        // background-color: rgba(255, 255, 255, 0.4);
+        &:hover {
+            color: rgb(2, 27, 121);
+            background-color: rgba(255, 255, 255, 1.0);
+            text-decoration: underline;
+        }
+        &.active {
+            background-color: rgba(255, 255, 255, 1.0);
+        }
+        text-align: center;
+        vertical-align: bottom;
+        width: 100%;
+        height: 100%;
+        padding: 1rem 0.5rem;
+        @include breakpoint (small down) {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Signika';
+    color: #006bb7;
+}
+
+#main {
+    h1 {
+        margin-top: 3rem;
+    }
+    h5 {
+        color: #666;
+    }
+    p {
+        color: #666;
+    }
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 235px;
+    .realtor {
+        height: 100px;
+        position: absolute;
+        bottom: 1rem;
+    }
+    .headshot {
+        height: 240px;
+        position: absolute;
+        bottom: 0;
+        right: 1rem;
+        @include breakpoint(small down) {
+            height: 200px;
+        }
+    }
+    .action {
+        margin: -1rem;
+        margin-top: 3rem;
+        padding: 1rem;
+        border: 1px solid #006bb7;
+        h4 span {
+            font-size: 85%;
+        }
+        @include breakpoint (large) {
+            width: 70%;
+            position: relative;
+        }
+        p {
+            margin-bottom: 0;
+        }
+        .action-button {
+            vertical-align: middle;
+            @include breakpoint (large) {
+                position: absolute;
+                right: -20%;
+                bottom: -1rem;
+            }
+            .button {
+                display: block;
+                margin: 0;
+                @include breakpoint (medium down) {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    p, li {
+        font-weight: normal;
+        color: #444;
+        font-size: 0.9rem;
+    }
+    h6 {
+        color: #333;
+        border-bottom: 1px dotted #333;
+        display: inline-block;
+    }
+}
