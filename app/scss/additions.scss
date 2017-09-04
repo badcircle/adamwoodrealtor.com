@@ -1,11 +1,11 @@
 body {
+    background-color: rgb(130, 129, 114);
     background: -webkit-linear-gradient(-57deg, rgb(241, 241, 241), rgb(130, 129, 114));
     background: linear-gradient(-57deg, rgb(241, 241, 241), rgb(130, 129, 114));
-    min-height: 100vh;
     font-family: 'Signika';
 }
 html {
-    background-color: #fff;
+    min-height: 100vh;
 }
 
 .logo {
@@ -78,9 +78,23 @@ h1, h2, h3, h4, h5, h6 {
     color: #006bb7;
 }
 
+.client-login {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 #main {
+    background-color: #fff;
+    background-image: url(../img/lubbockmap-fs8.png);
+    background-repeat: no-repeat;
+    background-position: 95% -20px;
     h1 {
         margin-top: 3rem;
+        @include breakpoint (small down) {
+            font-size: 2rem;
+            padding-top: 3rem;
+            margin-top: 0;
+        }
     }
     h5 {
         color: #666;
@@ -88,7 +102,6 @@ h1, h2, h3, h4, h5, h6 {
     p {
         color: #666;
     }
-    background-color: #fff;
     position: relative;
     padding-bottom: 235px;
     .realtor {
@@ -110,6 +123,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 3rem;
         padding: 1rem;
         border: 1px solid #006bb7;
+        background-color: rgba(255, 255, 255, 0.8);
         h4 span {
             font-size: 85%;
         }
@@ -135,6 +149,24 @@ h1, h2, h3, h4, h5, h6 {
                 }
             }
         }
+    }
+}
+
+#newsletter {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    background-color: #eee;
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #777;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+    color: #777;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+    color: #777;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+    color: #777;
     }
 }
 
