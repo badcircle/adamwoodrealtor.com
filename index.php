@@ -12,8 +12,8 @@
     
   <div class="grid-container">
       <div class="grid-x">
-          <div class="cell shrink">
-            <img src="img/cropped-blurealtylogo.png" class="logo" alt="">
+          <div class="cell small-12 shrink logo">
+            <img src="img/cropped-blurealtylogo.png" class="" alt="">
           </div>
           <div class="cell auto">
             <ul class="menu align-right">
@@ -22,7 +22,7 @@
           </div>
       </div>
       <div class="grid-x">
-          <div class="cell small-10 small-offset-1 navigation">
+          <div class="cell small-8 small-offset-2 medium-10 medium-offset-1 navigation">
             <ul class="menu simple align-center expanded">
               <li class="left"><a href="#" class="active left">About</a></li>
               <li><a href="#">Featured Listings</a></li>
@@ -42,12 +42,12 @@
         <div class="grid-x">
           <div class="cell small-10 small-offset-1">
             <h1>Buying or selling your next home doesn't have to be a hassle. Let's get started.</h1>
-            <h5>Serving Lubbock, TX and surrounding areas</h5>
+            <h5 class="subline">Serving Lubbock, TX and surrounding areas</h5>
 
             <div class="grid-x action" data-equalizer>
               <div class="cell large-8" data-equalizer-watch data-equalize-on="medium">
                 <h4>Adam Wood</h4>
-                <p>(806) 777-9831 &middot; <a href="mailto:awood@theblurealty.com?subject=Realtor Services">awood@theblurealty.com</a></p>
+                <h5 class="subline">(806) 777-9831 &middot; <a href="mailto:awood@theblurealty.com?subject=Realtor Services">awood@theblurealty.com</a></h5>
               </div>
               <div class="cell small-12 large-4 action-button" data-equalizer-watch>
                 <a href="#" class="button large">Get Started &rarr;</a>
@@ -71,7 +71,7 @@
         <div class="grid-x">
           <div class="cell small-10 small-offset-1">
             <h5>Subscribe to Adam's Quarterly Newsletter</h5>
-            <p>Curated articles, DIY projects, tips and tricks, recipes and other ideas for homeowners, published quarterly.</p>
+            <p class="subline">Curated articles, DIY projects, tips and tricks, recipes and other ideas for homeowners, published quarterly.</p>
             <!-- Begin MailChimp Signup Form -->
             <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
             <style type="text/css">
@@ -79,7 +79,7 @@
               /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
                 We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
             </style>
-            <div id="mc_embed_signup">
+            <div id="mc_embed_signupß">
             <form action="//texasnursesconference.us1.list-manage.com/subscribe/post?u=67343725b832cba5ed29575aa&amp;id=256a708dbf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
                   <div class="grid-x">
