@@ -61,6 +61,7 @@ a {
         vertical-align: bottom;
         @include breakpoint (small down) {
             margin-top: 1px;
+            display: block;
         }
     }
     ul.menu li a {

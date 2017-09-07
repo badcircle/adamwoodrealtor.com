@@ -128,6 +128,7 @@
           <li><a href="#">TREC Information About Brokerage Service</a></li>
           <li><a href="#">TREC Consumer Protection Notice</a></li>
         </ul>
+        <img src="img/fheo350-fs8.png" style="margin: 3rem auto 3rem auto; width: 100px; display: block;" alt="">
       </div>
     </div>
   </div>
