@@ -10,30 +10,7 @@
   <body>
   <div class="layer">
     
-  <div class="grid-container">
-      <div class="grid-x">
-          <div class="cell small-12 shrink logo">
-            <img src="img/cropped-blurealtylogo.png" class="" alt="">
-          </div>
-          <div class="cell auto">
-            <ul class="menu align-right">
-              <li><a href="#" class="button small client-login">CLIENT LOGIN</a></li>
-            </ul>
-          </div>
-      </div>
-      <div class="grid-x">
-          <div class="cell small-8 small-offset-2 medium-10 medium-offset-1 navigation">
-            <ul class="menu simple align-center expanded">
-              <li class="left"><a href="#" class="active left">About</a></li>
-              <li><a href="#">Featured Listings</a></li>
-              <li><a href="#">Buy</a></li>
-              <li><a href="#">Sell</a></li>
-              <li><a href="#">Home Valuation</a></li>
-              <li class="right"><a href="#" class="right">Contact</a></li>
-            </ul>
-          </div>
-      </div>
-  </div>
+  <?php include 'header.php'; ?>
 
   <div class="grid-x" id="main">
     <div class="cell">
@@ -100,44 +77,9 @@
     </div>
   </div>
 
-  <div class="grid-container" id="footer">
-    <div class="grid-x">
-      <div class="cell large-2 medium-11 small-10 small-offset-1">
-        <h6>Office Location</h6>
-        <p>
-          Blu Realty<br />
-          1506 Texas Ave.<br />
-          Lubbock, TX 79401
-        </p>
-      </div>
-      <div class="cell large-3 medium-5 small-offset-1 small-10">
-        <h6>Associations</h6>
-        <div class="grid-x">
-          <div class="cell auto">
-            <p>Adam Wood is a member of the <a href="http://lubbockrealtors.com">LAR</a> <em>Lubbock Association of Realtors</em>, <a href="http://texasrealestate.com">TAR</a> <em>Texas Association of Realtors</em>, and <a href="http://realtor.com">NAR</a> <em>National Association of Realtors</em>.</p>
-          </div>
-          <div class="cell shrink">
-            <img src="img/realtor-bw-fs8.png" alt="" style="width: 30px; margin-left: 1rem;" />
-          </div>
-        </div>
-        <p>Proud Associate of <a href="http://theblurealty.com">Blu Realty</a></p>
-      </div>
-      <div class="cell large-3 medium-5 small-offset-1 small-10">
-        <h6>Information</h6>
-        <ul>
-          <li><a href="#">TREC Information About Brokerage Service</a></li>
-          <li><a href="#">TREC Consumer Protection Notice</a></li>
-        </ul>
-        <img src="img/fheo350-fs8.png" style="margin: 3rem auto 3rem auto; width: 100px; display: block;" alt="">
-      </div>
-    </div>
-  </div>
+  <?php include 'footer.php'; ?>
 
   </div>
-
-    <script src="js/jquery.js"></script>
-    <script src="js/what-input.js"></script>
-    <script src="js/foundation.js"></script>
-    <script src="js/app.js"></script>
+  <?php include 'globalscripts.php'; ?>
   </body>
 </html>
