@@ -15,7 +15,8 @@
   <div class="grid-x bare" id="main">
     <div class="cell">
       
-      <div class="grid-container" id="polaroids">
+      <div class="grid-container fluid" id="polaroids">
+      <div class="grid-container">
 
         <div class="grid-x elevated">
           <div class="cell small-10 small-offset-1">
@@ -26,6 +27,11 @@
         <div class="grid-x" id="form_buy" style="margin-top: 3rem;">
           <div class="cell medium-8 medium-offset-2 small-10 small-offset-1" id="form_content">
             <form action="" method="POST" data-abide novalidate>
+
+              <div class="grid-x">
+                <div class="cell small-12 medium-12 large-6 auto"><img style="max-width: 70%;" src="img/letterhead_contact_01.png" alt=""></div>
+                <div class="cell small-12 large-6 shrink text-center"><img style="max-width: 50%;" src="img/letterhead_contact_1_02.png" alt=""></div>
+              </div>
               
               <div class="grid-x grid-margin-x" style="margin-top: 1rem;">
                 <div class="cell small-12 large-6">
@@ -52,9 +58,10 @@
 
               <div class="grid-x grid-margin-x">
                 <div class="cell small-12"><span class="label_group">Preferred method of contact:</span></div>
-                <div class="cell large-4 small-12"><label for="communicate_phone"><input type="radio" name="communication" value="Phone" id="communicate_phone"> Phone</label></div>
-                <div class="cell large-4 small-12"><label for="communicate_text"><input type="radio" name="communication" value="Text (SMS)" id="communicate_text"> Text (SMS)</label></div>
-                <div class="cell large-4 small-12"><label for="communicate_email"><input type="radio" name="communication" value="Email" id="communicate_email"> Email</label></div>
+                <div class="cell large-3 small-12"><label for="communicate_phone"><input type="radio" name="communication" value="Phone" id="communicate_phone"> Phone</label></div>
+                <div class="cell large-3 small-12"><label for="communicate_text"><input type="radio" name="communication" value="Text (SMS)" id="communicate_text"> Text (SMS)</label></div>
+                <div class="cell large-3 small-12"><label for="communicate_facebook"><input type="radio" name="communication" value="Facebook" id="communicate_email"> Facebook</label></div>
+                <div class="cell large-3 small-12"><label for="communicate_email"><input type="radio" name="communication" value="Email" id="communicate_email"> Email</label></div>
               </div>
 
               <div class="grid-x grid-margin-x" style="margin-top: 1rem;">
@@ -76,6 +83,8 @@
 
         <img src="img/bg_houses/polaroids-1.jpg" class="polaroid polaroid-1" alt="" >
         <img src="img/bg_houses/polaroids-2.jpg" class="polaroid polaroid-2" alt="" >
+
+      </div>
       </div>
 
     </div>
