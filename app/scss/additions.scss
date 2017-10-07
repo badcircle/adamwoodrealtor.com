@@ -196,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-#form_buy {
+#form_buy, #form_sell {
     label {
         font-family: "Roboto Condensed";
         font-size: 1.1rem;
@@ -230,6 +230,11 @@ h1, h2, h3, h4, h5, h6 {
         background-size: contain;
     }
 }
+#form_sell {
+    #form_content {
+        background-image: url(../img/letterhead2.png);
+    }
+}
 
 .elevated {
     z-index: 1000;
@@ -246,7 +251,7 @@ h1, h2, h3, h4, h5, h6 {
         z-index: 999;
     }
     .polaroid-1 {
-        top: 14rem;
+        top: 17rem;
         left: -2%;
     }
     .polaroid-2 {
@@ -256,6 +261,15 @@ h1, h2, h3, h4, h5, h6 {
     #form_buy {
         // background-color: #fff;
         // z-index: 999;
+    }
+}
+#planning {
+    background-image: url(../img/desktop.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include breakpoint (medium down) {
+        background-size: 150%;
     }
 }
 
