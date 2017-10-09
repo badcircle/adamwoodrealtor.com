@@ -4,5 +4,5 @@
     <li class="nav_buy"><a href="buy.php">Buy</a></li>
     <li class="nav_sell"><a href="sell.php">Sell</a></li>
     <!-- <li class="nav_valuation"><a href="#">Home Valuation</a></li> -->
-    <li class="nav_contact right"><a href="#" class="right">Contact</a></li>
+    <li class="nav_contact right"><a href="contact.php" class="right">Contact</a></li>
 </ul>

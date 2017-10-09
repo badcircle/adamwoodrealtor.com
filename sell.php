@@ -18,19 +18,19 @@
       <div class="grid-container fluid" id="planning">
       <div class="grid-container">
 
-        <div class="grid-x elevated">
+        <div class="grid-x elevated alt">
           <div class="cell small-10 small-offset-1">
             <h1 style="line-height: 1.2;">Empower yourself with knowledge and sound advice so you can sell your home with confidence.</h1>
           </div>
         </div>
 
         <div class="grid-x" id="form_sell" style="margin-top: 3rem;">
-          <div class="cell medium-8 medium-offset-2 small-10 small-offset-1" id="form_content">
+          <div class="cell medium-10 medium-offset-1 large-8 large-offset-2 small-12" id="form_content">
             <form action="" method="POST" data-abide novalidate>
 
               <div class="grid-x">
-                <div class="cell small-12 medium-12 large-6 auto"><img style="max-width: 70%;" src="img/letterhead_contact_01.png" alt=""></div>
-                <div class="cell small-12 large-6 shrink text-center"><img style="max-width: 50%;" src="img/letterhead_contact_1_02.png" alt=""></div>
+                <div class="cell small-12 large-6 shrink text-center"><img style="min-width: 180px; max-width: 220px;" src="img/letterhead_contact_1_02.png" alt=""></div>
+                <div class="cell small-12 medium-12 large-6 text-center auto"><img style="max-width: 220px;" src="img/letterhead_contact_01.png" alt=""></div>
               </div>
               
               <div class="grid-x grid-margin-x" style="margin-top: 1rem;">

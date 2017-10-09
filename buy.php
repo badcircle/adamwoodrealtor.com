@@ -1,3 +1,21 @@
+<?php
+require 'includes/connect.php';
+
+if (!empty($_POST)) {
+  
+  $put = $dbh->prepare("INSERT INTO `buy` (`name`,`phone`,`email`,`method_of_contact`,`comments`,`how_soon`) VALUES (:name, :phone, :email, :contact, :comments, :how_soon)");
+  $put->bindParam('name', $_POST['name']);
+  $put->bindParam('phone', $_POST['phone']);
+  $put->bindParam('email', $_POST['email']);
+  $put->bindParam('contact', $_POST['communication']);
+  $put->bindParam('comments', $_POST['comments']);
+  $put->bindParam('how_soon', $_POST['how_soon']);
+  $put->execute();
+  header("Location: buy.php?thanks");
+
+}
+
+?>
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -26,12 +44,12 @@
         </div>
 
         <div class="grid-x" id="form_buy" style="margin-top: 3rem;">
-          <div class="cell medium-8 medium-offset-2 small-10 small-offset-1" id="form_content">
+          <div class="cell medium-10 medium-offset-1 large-8 large-offset-2 small-12" id="form_content">
             <form action="" method="POST" data-abide novalidate>
 
               <div class="grid-x">
-                <div class="cell small-12 medium-12 large-6 auto"><img style="max-width: 70%;" src="img/letterhead_contact_01.png" alt=""></div>
-                <div class="cell small-12 large-6 shrink text-center"><img style="max-width: 50%;" src="img/letterhead_contact_1_02.png" alt=""></div>
+                <div class="cell small-12 large-6 shrink text-center"><img style="min-width: 180px; max-width: 220px;" src="img/letterhead_contact_1_02.png" alt=""></div>
+                <div class="cell small-12 medium-12 text-center large-6 auto"><img style="max-width: 220px;" src="img/letterhead_contact_01.png" alt=""></div>
               </div>
               
               <div class="grid-x grid-margin-x" style="margin-top: 1rem;">
@@ -61,15 +79,15 @@
                 <div class="cell small-12"><span class="label_group">Preferred method of contact:</span></div>
                 <div class="cell large-3 small-12"><label for="communicate_phone"><input type="radio" name="communication" value="Phone" id="communicate_phone"> Phone</label></div>
                 <div class="cell large-3 small-12"><label for="communicate_text"><input type="radio" name="communication" value="Text (SMS)" id="communicate_text"> Text (SMS)</label></div>
-                <div class="cell large-3 small-12"><label for="communicate_facebook"><input type="radio" name="communication" value="Facebook" id="communicate_email"> Facebook</label></div>
+                <div class="cell large-3 small-12"><label for="communicate_facebook"><input type="radio" name="communication" value="Facebook" id="communicate_facebook"> Facebook</label></div>
                 <div class="cell large-3 small-12"><label for="communicate_email"><input type="radio" name="communication" value="Email" id="communicate_email"> Email</label></div>
               </div>
 
               <div class="grid-x grid-margin-x" style="margin-top: 1rem;">
                 <div class="cell small-12"><span class="label_group">When are you expecting to purchase?</span></div>
-                <div class="cell small-12"><label for="purchase_days"><input type="radio" name="moving" value="days" id="purchase_days">in the next few days</label></div>
-                <div class="cell small-12"><label for="purchase_month"><input type="radio" name="moving" value="month" id="purchase_month"> within the month or next few months</label></div>
-                <div class="cell small-12"><label for="purchase_6months"><input type="radio" name="moving" value="6months" id="purchase_6months"> within the next 6 months</label></div>
+                <div class="cell small-12"><label for="purchase_days"><input type="radio" name="how_soon" value="days" id="purchase_days">in the next few days</label></div>
+                <div class="cell small-12"><label for="purchase_month"><input type="radio" name="how_soon" value="month" id="purchase_month"> within the month or next few months</label></div>
+                <div class="cell small-12"><label for="purchase_6months"><input type="radio" name="how_soon" value="6months" id="purchase_6months"> within the next 6 months</label></div>
               </div>
 
               <div class="grid-x" style="margin-top: 1rem;">

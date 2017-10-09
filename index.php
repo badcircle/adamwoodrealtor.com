@@ -18,8 +18,10 @@
       <div class="grid-container">
         <div class="grid-x">
           <div class="cell small-10 small-offset-1">
-            <h1>Buying or selling your next home doesn't have to be a hassle. Let's get started.</h1>
+            <h1>Buying or selling your next home doesn't have to be a hassle. <em>Bl&uuml;</em> makes it easy &mdash; let's get started!</h1>
             <h5 class="subline">Serving Lubbock, TX and surrounding areas</h5>
+
+            <p style="margin-top: 3rem;"><a class="button" href="http://theblurealty.com" target="_blank">Learn more about Bl&uuml;&reg;</a></p>
 
             <div class="grid-x action" data-equalizer>
               <div class="cell large-8" data-equalizer-watch data-equalize-on="medium">
@@ -27,7 +29,7 @@
                 <h5 class="subline">(806) 777-9831 &middot; <a href="mailto:awood@theblurealty.com?subject=Realtor Services">awood@theblurealty.com</a></h5>
               </div>
               <div class="cell small-12 large-4 action-button" data-equalizer-watch>
-                <a href="#" class="button large">Get Started &rarr;</a>
+                <a href="contact.php" class="button large">Get Started &rarr;</a>
               </div>
             </div>
 
