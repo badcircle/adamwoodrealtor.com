@@ -3,14 +3,14 @@ require 'includes/connect.php';
 
 if (!empty($_POST)) {
   
-  $put = $dbh->prepare("INSERT INTO `buy` (`name`,`phone`,`email`,`method_of_contact`,`comments`) VALUES (:name, :phone, :email, :contact, :comments)");
+  $put = $dbh->prepare("INSERT INTO `contact` (`name`,`phone`,`email`,`method_of_contact`,`comments`) VALUES (:name, :phone, :email, :contact, :comments)");
   $put->bindParam('name', $_POST['name']);
   $put->bindParam('phone', $_POST['phone']);
   $put->bindParam('email', $_POST['email']);
   $put->bindParam('contact', $_POST['communication']);
   $put->bindParam('comments', $_POST['comments']);
   $put->execute();
-  header("Location: buy.php?thanks");
+  header("Location: contact.php?thanks");
 
 }
 

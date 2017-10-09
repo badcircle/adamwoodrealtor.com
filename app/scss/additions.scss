@@ -2,7 +2,7 @@ body {
     background-color: rgb(130, 129, 114);
     background: -webkit-linear-gradient(-57deg, rgb(241, 241, 241), rgb(130, 129, 114));
     background: linear-gradient(-57deg, rgb(241, 241, 241), rgb(130, 129, 114));
-    font-family: 'Signika';
+    font-family: 'Roboto Condensed';
     border-top: 5px solid #006bb7;
 }
 html {
@@ -91,7 +91,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Signika';
+    font-family: 'Arvo';
     color: #006bb7;
 }
 .subline {
@@ -123,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 3rem;
         line-height: 105%;
         @include breakpoint (small down) {
-            font-size: 180%;
+            font-size: 190%;
         }
     }
     .elevated h1 {
