@@ -25,8 +25,8 @@
             <div class="cell auto"><h1>Client Login</h1></div>
         </div>
         <div class="grid-x grid-padding-x">
-            <div class="cell small-12 medium-4"><label for="username">Username</label></div>
-            <div class="cell auto"><input type="text" name="username" id="username" /></div>
+            <div class="cell small-12 medium-4"><label for="username">Email Address</label></div>
+            <div class="cell auto"><input type="text" name="username" id="username" placeholder="email@domain.com" /></div>
         </div>
         <div class="grid-x grid-padding-x">
             <div class="cell small-12 medium-4"><label for="password">Password</label></div>
@@ -34,7 +34,7 @@
         </div>
         <div class="grid-x grid-padding-x">
             <div class="cell auto medium-offset-4">
-                <p style="font-size: 90%;"><a href="?forgot">Forgot password?</a> <a href="contact.php">Not a client?</a></p>
+                <p style="font-size: 90%;"><a href="?forgot">Forgot password?</a> <a style="margin-left: 1rem;" href="contact.php">Not a client?</a></p>
                 <input class="button" type="submit" value="Login" id="submit">
             </div>
         </div>

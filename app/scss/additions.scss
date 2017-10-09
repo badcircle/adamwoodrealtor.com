@@ -240,7 +240,11 @@ h1, h2, h3, h4, h5, h6 {
         background-image: url(../img/letterhead2.png);
     }
 }
-
+form .grid-x:first-of-type .cell:last-of-type img {
+    @include breakpoint(medium) {
+        margin-top: 3rem;
+    }
+}
 .elevated {
     z-index: 1000;
     position: relative;
