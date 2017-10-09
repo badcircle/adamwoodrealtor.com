@@ -38,7 +38,7 @@ if (!empty($_POST)) {
 
         <div class="grid-x elevated">
           <div class="cell small-10 small-offset-1">
-            <h1>Your dream home, just clicks away.</h1>
+            <h1>Your dream home, just clicks away</h1>
             <p>Together, we'll find the perfect home for you. Tell me a little about yourself to get started.</p>
           </div>
         </div>

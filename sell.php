@@ -20,7 +20,8 @@
 
         <div class="grid-x elevated alt">
           <div class="cell small-10 small-offset-1">
-            <h1 style="line-height: 1.2;">Empower yourself with knowledge and sound advice so you can sell your home with confidence.</h1>
+            <h1>Sell with confidence</h1>
+            <p>Empower yourself with knowledge of current market trends and sound advice so you can sell your home with confidence.</p>
           </div>
         </div>
 

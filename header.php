@@ -5,7 +5,7 @@
         </div>
         <div class="cell auto">
         <ul class="menu align-right">
-            <li><a href="#" class="button small client-login">CLIENT LOGIN</a></li>
+            <li><a href="login.php" class="button small client-login">CLIENT LOGIN</a></li>
         </ul>
         </div>
     </div>
