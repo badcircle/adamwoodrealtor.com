@@ -1,6 +1,9 @@
 <?php
 require 'includes/connect.php';
 
+// set some initial state variables here
+$thanks = false;
+
 if (!empty($_POST)) {
   
   $put = $dbh->prepare("INSERT INTO `contact` (`name`,`phone`,`email`,`method_of_contact`,`comments`) VALUES (:name, :phone, :email, :contact, :comments)");
@@ -12,6 +15,10 @@ if (!empty($_POST)) {
   $put->execute();
   header("Location: contact.php?thanks");
 
+}
+
+if (isset($_GET['thanks'])) {
+  $thanks = true;
 }
 
 ?>
@@ -37,14 +44,17 @@ if (!empty($_POST)) {
 
         <div class="grid-x elevated contact">
           <div class="cell small-10 small-offset-1">
-            <h1>Get in touch</h1>
+            <h1>Let's talk</h1>
             <p>Do you have questions about the market, the buying or selling process, or how to maximize your home's value? Let's chat!</p>
           </div>
         </div>
 
         <div class="grid-x" id="form_buy" style="margin-top: 3rem;">
           <div class="cell medium-10 medium-offset-1 large-8 large-offset-2 small-12" id="form_content">
-            <form action="" method="POST" data-abide novalidate>
+            <form action="" method="POST" id="formContact" data-abide novalidate>
+              <?php if ($thanks) { ?>
+              <img src="img/thanks.png" alt="Thanks" id="thanksImage" />
+              <?php } ?>
 
               <div class="grid-x">
                 <div class="cell small-12 large-6 shrink text-center"><img style="min-width: 180px; max-width: 220px;" src="img/letterhead_contact_1_02.png" alt=""></div>
@@ -105,7 +115,11 @@ if (!empty($_POST)) {
   </div>
   <?php include 'globalscripts.php'; ?>
   <script type="text/javascript">
-    $(document).ready({
+    $(document).ready(function() {
+
+      <?php if ($thanks) { ?>
+      $("#formContact textarea, #formContact input").prop("disabled", true);
+      <?php } ?>
 
     });
   </script>

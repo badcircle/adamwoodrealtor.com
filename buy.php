@@ -15,6 +15,10 @@ if (!empty($_POST)) {
 
 }
 
+if (isset($_GET['thanks'])) {
+  $thanks = true;
+}
+
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -38,14 +42,17 @@ if (!empty($_POST)) {
 
         <div class="grid-x elevated">
           <div class="cell small-10 small-offset-1">
-            <h1>Your dream home, just clicks away</h1>
-            <p>Together, we'll find the perfect home for you. Tell me a little about yourself to get started.</p>
+            <h1>Invest in your future, start here</h1>
+            <p>Whether you're buying your first home, moving-in, upsizing or looking to invest &mdash; together, we'll find the perfect home for you. Tell me a little about yourself to get started.</p>
           </div>
         </div>
 
         <div class="grid-x" id="form_buy" style="margin-top: 3rem;">
           <div class="cell medium-10 medium-offset-1 large-8 large-offset-2 small-12" id="form_content">
-            <form action="" method="POST" data-abide novalidate>
+            <form action="" method="POST" data-abide novalidate id="formBuy">
+              <?php if ($thanks) { ?>
+              <img src="img/thanks.png" alt="Thanks" id="thanksImage" />
+              <?php } ?>
 
               <div class="grid-x">
                 <div class="cell small-12 large-6 shrink text-center"><img style="min-width: 180px; max-width: 220px;" src="img/letterhead_contact_1_02.png" alt=""></div>
@@ -116,8 +123,10 @@ if (!empty($_POST)) {
   </div>
   <?php include 'globalscripts.php'; ?>
   <script type="text/javascript">
-    $(document).ready({
-
+    $(document).ready(function() {
+      <?php if ($thanks) { ?>
+      $("#formBuy textarea, #formBuy input").prop("disabled", true);
+      <?php } ?>
     });
   </script>
   </body>

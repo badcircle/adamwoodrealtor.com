@@ -1,3 +1,32 @@
+<?php
+require 'includes/connect.php';
+
+if (!empty($_POST)) {
+  
+  $put = $dbh->prepare("INSERT INTO `sell` (`name`, `phone`, `email`, `method_of_contact`, `address`, `unit`, `city`, `property_type`, `current_resident`, `bedrooms`, `bathrooms`, `how_soon`, `other_comments`) VALUES (:name, :phone, :email, :method_of_contact, :address, :unit, :city, :property_type, :current_resident, :bedrooms, :bathrooms, :how_soon, :other_comments)");
+  $put->bindParam('name', $_POST['name']);
+  $put->bindParam('phone', $_POST['phone']);
+  $put->bindParam('email', $_POST['email']);
+  $put->bindParam('method_of_contact', $_POST['method_of_contact']);
+  $put->bindParam('address', $_POST['address']);
+  $put->bindParam('unit', $_POST['unit']);
+  $put->bindParam('city', $_POST['city']);
+  $put->bindParam('property_type', $_POST['property_type']);
+  $put->bindParam('current_resident', $_POST['current_resident']);
+  $put->bindParam('bedrooms', $_POST['bedrooms']);
+  $put->bindParam('bathrooms', $_POST['bathrooms']);
+  $put->bindParam('how_soon', $_POST['how_soon']);
+  $put->bindParam('other_comments', $_POST['other_comments']);
+  $put->execute();
+  header("Location: sell.php?thanks");
+
+}
+
+if (isset($_GET['thanks'])) {
+  $thanks = true;
+}
+
+?>
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -27,7 +56,10 @@
 
         <div class="grid-x" id="form_sell" style="margin-top: 3rem;">
           <div class="cell medium-10 medium-offset-1 large-8 large-offset-2 small-12" id="form_content">
-            <form action="" method="POST" data-abide novalidate>
+            <form action="" method="POST" data-abide novalidate id="formSell">
+              <?php if ($thanks) { ?>
+              <img src="img/thanks.png" alt="Thanks" id="thanksImage" />
+              <?php } ?>
 
               <div class="grid-x">
                 <div class="cell small-12 large-6 shrink text-center"><img style="min-width: 180px; max-width: 220px;" src="img/letterhead_contact_1_02.png" alt=""></div>
@@ -54,10 +86,10 @@
 
               <div class="grid-x grid-margin-x">
                 <div class="cell small-12"><span class="label_group">Preferred method of contact:</span></div>
-                <div class="cell large-3 small-12"><label for="communicate_phone"><input type="radio" name="communication" value="Phone" id="communicate_phone"> Phone</label></div>
-                <div class="cell large-3 small-12"><label for="communicate_text"><input type="radio" name="communication" value="Text (SMS)" id="communicate_text"> Text (SMS)</label></div>
-                <div class="cell large-3 small-12"><label for="communicate_facebook"><input type="radio" name="communication" value="Facebook" id="communicate_facebook"> Facebook</label></div>
-                <div class="cell large-3 small-12"><label for="communicate_email"><input type="radio" name="communication" value="Email" id="communicate_email"> Email</label></div>
+                <div class="cell large-3 small-12"><label for="communicate_phone"><input type="radio" name="method_of_contact" value="Phone" id="communicate_phone"> Phone</label></div>
+                <div class="cell large-3 small-12"><label for="communicate_text"><input type="radio" name="method_of_contact" value="Text (SMS)" id="communicate_text"> Text (SMS)</label></div>
+                <div class="cell large-3 small-12"><label for="communicate_facebook"><input type="radio" name="method_of_contact" value="Facebook" id="communicate_facebook"> Facebook</label></div>
+                <div class="cell large-3 small-12"><label for="communicate_email"><input type="radio" name="method_of_contact" value="Email" id="communicate_email"> Email</label></div>
               </div>
 
               <div class="grid-x grid-margin-x">
@@ -118,7 +150,7 @@
                   </div>
                   <div class="cell small-12">
                     <label for="">Anything else I should know right now? Any specific questions?<br />
-                    <textarea name="comments" id="comments" cols="30" rows="5"></textarea></label>
+                    <textarea name="other_comments" id="other_comments" cols="30" rows="5"></textarea></label>
                   </div>
               </div>
 
@@ -145,8 +177,10 @@
   </div>
   <?php include 'globalscripts.php'; ?>
   <script type="text/javascript">
-    $(document).ready({
-
+    $(document).ready(function() {
+      <?php if ($thanks) { ?>
+      $("#formSell textarea, #formSell input").prop("disabled", true);
+      <?php } ?>
     });
   </script>
   </body>
