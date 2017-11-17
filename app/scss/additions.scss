@@ -371,3 +371,18 @@ body.page_contact #main {
         }
     }
 }
+
+.home-wrapper {
+    background-size: 45%;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    &.align-right {
+        background-position: top right;
+    }
+    @include breakpoint(medium down) {
+        background-size: 50%;
+    }
+    @include breakpoint(small down) {
+        background-size: 90%;
+    }
+}

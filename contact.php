@@ -45,7 +45,7 @@ if (isset($_GET['thanks'])) {
         <div class="grid-x elevated contact">
           <div class="cell small-10 small-offset-1">
             <h1>Let's talk</h1>
-            <p>Do you have questions about the market, the buying or selling process, or how to maximize your home's value? Let's chat!</p>
+            <p>Do you have questions about the market, the buying or selling process or how to maximize your home's value? Let's chat!</p>
           </div>
         </div>
 
