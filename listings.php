@@ -26,11 +26,63 @@
     <div class="grid-container">
         <div class="grid-x">
         <div class="cell small-12">
-            <div class="home-wrapper" data-align="left" data-image="10110-vernon1.jpg">
-                Test
+            <div class="home-wrapper" data-align="left">
+                <div class="grid-x">
+                    <div class="cell small-12 medium-7 photo">
+                        <img src="houses/10110-vernon1.jpg" alt="10110 Vernon Ave">
+                    </div>
+                    <div class="cell small-12 medium-5">
+                        <div class="home-inner">
+                            <div class="stats">
+                                <div class="address">10110 Vernon Ave, Lubbock, TX 79423</div>
+                                <div class="entryItems">
+                                    <div class="entry">
+                                        <label class="label" for="Baths">Beds</label> 3
+                                    </div>
+                                    <div class="entry">
+                                        <label class="label" for="Baths">Baths</label> 3
+                                    </div>
+                                    <div class="entry">
+                                        <label for="sqft" class="label">Sq. Ft.</label> 1,575
+                                    </div>
+                                    <div class="entry">
+                                        <label for="lotSqft" class="label">Lot Sq. Ft.</label> 5,750
+                                    </div>
+                                </div>
+                                <div class="price">$207,500</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="home-wrapper" data-align="right" data-image="10110-vernon1.jpg">
-                Test
+            <div class="home-wrapper" data-align="right">
+                <div class="grid-x">
+                    <div class="cell small-12 medium-7 photo">
+                        <img src="houses/10110-vernon1.jpg" alt="10110 Vernon Ave">
+                    </div>                    
+                    <div class="cell small-12 medium-5">
+                        <div class="home-inner">
+                            <div class="stats">
+                                <div class="address">10110 Vernon Ave, Lubbock, TX 79423</div>
+                                <div class="entryItems">
+                                    <div class="entry">
+                                        <label class="label" for="Baths">Beds</label> 3
+                                    </div>
+                                    <div class="entry">
+                                        <label class="label" for="Baths">Baths</label> 3
+                                    </div>
+                                    <div class="entry">
+                                        <label for="sqft" class="label">Sq. Ft.</label> 1,575
+                                    </div>
+                                    <div class="entry">
+                                        <label for="lotSqft" class="label">Lot Sq. Ft.</label> 5,750
+                                    </div>
+                                </div>
+                                <div class="price">$207,500</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         </div>
@@ -48,10 +100,8 @@
   <script type="text/javascript">
   $(document).ready(function(){
     $('.home-wrapper').each(function() {
-        var bg = "url('houses/"+$(this).attr('data-image')+"')";
-        $(this).css('background-image', bg);
         if ($(this).attr('data-align') == 'right') {
-            $(this).addClass('align-right');
+            $(this).find('>:first-child').find(">:first-child").addClass("medium-order-2").next('.cell').css('text-align', 'right');
         }
     });
   });

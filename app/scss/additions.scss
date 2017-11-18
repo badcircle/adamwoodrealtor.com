@@ -373,16 +373,69 @@ body.page_contact #main {
 }
 
 .home-wrapper {
-    background-size: 45%;
+    background-size: 55%;
     background-repeat: no-repeat;
-    min-height: 400px;
-    &.align-right {
-        background-position: top right;
-    }
-    @include breakpoint(medium down) {
-        background-size: 50%;
-    }
+    margin-top: 3rem;
+    border-bottom: 5px solid #006bb7;
     @include breakpoint(small down) {
-        background-size: 90%;
+        background-size: 100%;
+    }
+    .photo {
+        position: relative;
+    }
+    .photo img {
+        position: relative;
+        bottom: -2rem;
+        box-shadow: 1px 3px 4px 0px rgba(0,0,0,0.40);
+        @include breakpoint(medium down) {
+            margin-bottom: 1rem;
+            bottom: auto;
+            position: relative;
+        }
+    }
+    .home-inner {
+        margin: 3rem 2rem 1rem 2rem;
+        .stats {
+            background-color: rgba(255, 255, 255, 0.75);
+            display: inline-block;
+            width: auto;
+            @include breakpoint(small down) {
+                margin: 0;
+                padding: 0.25rem 1rem;
+            }
+            .entry {
+                border-bottom: 1px dotted #aaa;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                text-align: left;
+            }
+            .entryItems div:last-of-type {
+                border-bottom: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .address {
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+                @include breakpoint(small down) {
+                    font-size: 1rem;
+                }
+            }
+            .price {
+                font-size: 1.5rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+        label {
+            width: 90px;
+            text-align: right;
+            border-radius: 2px;
+            margin-right: 0.5rem;
+        }
+        @include breakpoint(small down) {
+            margin: 1rem;
+            text-align: left;
+        }
     }
 }
